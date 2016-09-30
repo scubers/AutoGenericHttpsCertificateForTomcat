@@ -14,7 +14,7 @@ clientCrtName="client"
 
 password="123456"
 
-currentIP=`ifconfig en0|grep 'inet '|sed 's/inet //g'|sed 's/ .*//g'`
+currentIP=`ifconfig en0|grep 'inet '|sed 's/inet //g'|sed 's/ .*//g'|sed 's/[^0-9^\.]//g'`
 
 
 # 生成服务器密钥文件 --> 生成server.key
